@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(25, 28px);
+  grid-template-rows: repeat(25, 28px);
+  gap: 1px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cell.player {
+  background-color: blue;
+  color: white;
+}
+
+.cell.target {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  #grid {
+    grid-template-columns: repeat(25, 24px);
+    grid-template-rows: repeat(25, 24px);
+  }
+  .cell {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  #grid {
+    grid-template-columns: repeat(25, 32px);
+    grid-template-rows: repeat(25, 32px);
+  }
+  .cell {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
